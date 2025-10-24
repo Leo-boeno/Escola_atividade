@@ -60,16 +60,16 @@ public class Pessoa implements Serializable {
         this.datanasimento = datanasimento;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Pessoa pessoa = (Pessoa) o;
-//        return Objects.equals(Id, pessoa.Id);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hashCode(Id);
-//    }
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(Id, pessoa.Id);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(Id);
+    }
 
 }

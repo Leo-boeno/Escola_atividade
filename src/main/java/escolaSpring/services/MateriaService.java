@@ -1,20 +1,22 @@
 package escolaSpring.services;
 
 import escolaSpring.entities.Aluno;
+import escolaSpring.entities.Materia;
 import escolaSpring.repositories.AlunoRepository;
+import escolaSpring.repositories.MateriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class AlunoService {
+public class MateriaService {
 
     @Autowired
-    private AlunoRepository alunoRepository;
+    private MateriaRepository materiaRepository;
 
-    public List<Aluno> findAll(){
+    public List<Materia> findAll(){
 
-        return alunoRepository.findAll();
+        return materiaRepository.findAll();
     }
 }

@@ -1,14 +1,18 @@
 package escolaSpring.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import java.util.*;
 
 @Entity
 @Table(name = "tb_professor")
 public class Professor extends Pessoa{
 
     private  String email;
+
+    @OneToMany(mappedBy = "professor")
+    private List<Departamento> departamento = new ArrayList<>();
 
     public Professor(){
         super();
@@ -26,5 +30,4 @@ public class Professor extends Pessoa{
     public void setEmail(String email) {
         this.email = email;
     }
-
 }
